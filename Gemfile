@@ -68,3 +68,6 @@ gem 'popper_js','~> 1.11.1'
 
 #adding simple_form to create a form
 gem 'simple_form'
+
+#devise
+gem 'devise'
