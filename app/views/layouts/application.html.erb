@@ -9,14 +9,24 @@
   </head>
 
   <body>
-
-    <% if current_user %>
-      You're signed in as <%= current_user.email %>.
-      <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
-    <% else %>
-      <%= link_to "Sign In", new_user_session_path %>
-      <%= link_to "Sign Up", new_user_registration_path %>
-    <% end %>
+    <div class="top-nav">
+      <div class="col-10 mr-auto ml-auto col-sm-8 col-md-6">
+        <div class="brand">
+          Grammable
+        </div>
+        <div class="add">
+          <% if current_user %>
+            You're signed in as <%= current_user.email %>.
+            <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
+          <% else %>
+            <%= link_to "Sign In", new_user_session_path %>
+            <%= link_to "Sign Up", new_user_registration_path %>
+          <% end %>
+        </div>
+      </div>
+      <br class="clear-fix">
+    </div>
+    
     <% if notice.present? %>
       <p class="notice"><%= notice %></p>
     <% end %>
