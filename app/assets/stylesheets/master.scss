@@ -1,6 +1,7 @@
 @import "bootstrap";
 @import url('https://fonts.googleapis.com/css?family=Pacifico&subset=latin-ext');
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+@import url('https://fonts.googleapis.com/css?family=Grand+Hotel');
 
 body{
   background-color: #fafafa;
@@ -12,12 +13,13 @@ body{
  border-bottom-color: #edeeee;
  border-bottom-width: 1px;
  border-bottom-style: solid;
- height: 70px;
- padding-top: 15px;
+ height: 80px;
+ padding-top: 10px;
+
 }
 
 .top-nav .add{
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 .top-nav .add a{
@@ -28,9 +30,15 @@ body{
 }
 
 .brand{
+  
+  font-size: 40px;
+  font-family: 'Grand Hotel', cursive;
+
+}
+
+.brand a{
+  text-decoration: none;
   color: #125688;
-  font-size: 30px;
-  font-family: 'Pacifico', cursive;
 }
 
 .card{
@@ -53,6 +61,7 @@ body{
 
 label{
   font-size: 18px;
+  display: none;
 }
 
 input{
@@ -66,7 +75,8 @@ input{
   border: none;
   font-size: 24px;
   color: white;
-  margin-top: 10px;
+  margin-top: 15px;
+  border-radius: 10px;
 }
 
 .input.boolean{
@@ -80,7 +90,7 @@ input{
 }
 
 .handle{
-  margin: 10px;
+  margin: 15px;
   color: #125688;
   font-weight: bold;
   font-size: 18px;
@@ -96,7 +106,9 @@ input{
   font-weight: bold;
   font-size: 16px;
   margin-right: 20px;
-
+  float: right;
+  text-decoration: none;
+  color: #125688;
 }
 
 .comments{
@@ -107,3 +119,67 @@ input{
   font-size: 16px;
   margin-top: 5px;
 }
+
+.float-r{
+  float: right;
+}
+
+.title{
+  padding: 10px 0 10px 0;
+}
+
+.form-control#comment_message{
+  border: none;
+  height: 120px;
+
+}
+
+.form-control#comment_message:hover{
+  background: #F6F6F6;
+
+}
+
+.form-control#comment_message{
+  border: none;
+  height: 120px;
+
+}
+
+.form-control#gram_message{
+  height: 180px;
+}
+
+.notice{
+  margin-bottom: 0;
+}
+
+.alert{
+  margin-bottom: 0;
+}
+
+.hideMe {
+    -moz-animation: cssAnimation 0s ease-in 3s forwards;
+    /* Firefox */
+    -webkit-animation: cssAnimation 0s ease-in 3s forwards;
+    /* Safari and Chrome */
+    -o-animation: cssAnimation 0s ease-in 3s forwards;
+    /* Opera */
+    animation: cssAnimation 0s ease-in 3s forwards;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+@keyframes cssAnimation {
+    to {
+        width:0;
+        height:0;
+        overflow:hidden;
+    }
+}
+@-webkit-keyframes cssAnimation {
+    to {
+        width:0;
+        height:0;
+        visibility:hidden;
+    }
+}
+

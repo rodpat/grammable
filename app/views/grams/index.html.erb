@@ -7,7 +7,7 @@
     <p>
       <%= gram.message %>
     </p>
-    <div class="gram-actions float-right">
+    <div class="gram-actions">
       <% if current_user && current_user == gram.user %>
         <%= link_to 'Edit', edit_gram_path(gram) %>
         <%= link_to 'Destroy', gram_path(gram), method: :delete, data: {confirm: 'Are you sure?' } %>
@@ -22,11 +22,12 @@
             <%= comment.user.email %>
           </span>
           <%= comment.message %>
+          <hr>
         </div>
       <% end %>
-      <h4>Add a comment</h4>
+      <!--<h4 class="title">Add a comment</h4> -->
       <%= simple_form_for Comment.new, url: gram_comments_path(gram) do |f| %>
-        <%= f.input :message %>
+        <%= f.input :message, placeholder:'Write your comment...' %>
         <%= f.submit 'Add Comment', class: 'my-btn' %>
       <% end %>
     </div>
